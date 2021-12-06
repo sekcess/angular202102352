@@ -35,8 +35,8 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
-        <li class="nav-item menu-open {{ moduleName == 'dashboard' ? 'menu-open' : '' }} {{ moduleName == 'dashboard2' ? 'menu-open' : '' }}">
-          <a href="#" class="nav-link {{ moduleName == 'dashboard' ? 'active' : '' }} {{ moduleName == 'dashboard2' ? 'active' : '' }}">
+        <li class="nav-item menu-open {{ moduleName == 'dashboard' ? 'menu-open' : '' }} {{ moduleName == 'dashboard2' ? 'menu-open' : '' }} {{ moduleName == 'dashboard3' ? 'menu-open' : '' }}">
+          <a href="#" class="nav-link {{ moduleName == 'dashboard' ? 'active' : '' }} {{ moduleName == 'dashboard2' ? 'active' : '' }} {{ moduleName == 'dashboard3' ? 'active' : '' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Dashboard
@@ -45,13 +45,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/dashboard" class="nav-link {{ moduleName == 'dashboard' ? 'active' : ''}}">
+              <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active" class="nav-link {{ moduleName == 'dashboard' ? 'active' : ''}}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Dashboard v1</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="/dashboard2" class="nav-link {{ moduleName == 'dashboard2' ? 'active' : ''}}">
+              <a [routerLink]="['/dashboard2']" routerLinkActive="router-link-active" class="nav-link {{ moduleName == 'dashboard2' ? 'active' : ''}}">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Dashboard v2</p>
               </a>
@@ -62,10 +62,12 @@
                 <p>Dashboard v3</p>
               </a>
             </li>
+            <li class="nav-item">
+            </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a [routerLink]="['/mahasiswa']" routerLinkActive="router-link-active" class="nav-link {{ moduleName == 'mahasiswa' ? 'active' : '' }}">
+          <a [routerLink]="['/mahasiswa']" routerLinkActive="router-link-active" class="nav-link {{  moduleName == 'mahasiswa' ? 'active' : '' }}">
             <i class="nav-icon fas fa-th"></i>
             <p>
               Mahasiswa
